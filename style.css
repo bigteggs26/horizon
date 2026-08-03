@@ -1,0 +1,361 @@
+*{
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+}
+
+
+:root {
+  /* Primary Colors */
+  --primary: #2563EB;        /* Ocean Blue */
+  --primary-light: #60A5FA;  /* Sky Blue */
+  --secondary: #14B8A6;      /* Tropical Teal */
+  --accent: #F59E0B;         /* Sunset Gold */
+
+  /* Backgrounds */
+  --background: #F8FAFC;     /* Soft White */
+  --surface: #FFFFFF;        /* Card White */
+  --footer-bg: #0F172A;      /* Midnight Navy */
+
+  /* Text */
+  --text-primary: #0F172A;   /* Dark Navy */
+  --text-secondary: #64748B; /* Slate Gray */
+  --text-light: #FFFFFF;
+
+  /* Borders & Shadows */
+  --border: #E2E8F0;
+  --shadow: rgba(15, 23, 42, 0.12);
+
+  /* Status Colors */
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --error: #EF4444;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #2563EB 0%, #14B8A6 100%);
+  --gradient-hero: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.9),
+    rgba(20, 184, 166, 0.8)
+  );
+}
+
+header{
+        background:
+    linear-gradient(
+        90deg,
+        #fff 15%,
+        rgba(255,255,255,.95) 35%,
+        rgba(255,255,255,.6) 55%,
+        transparent 75%
+    ), 
+    linear-gradient(rgba(0, 0, 0, 0.1)),
+        url("https://res.cloudinary.com/qgfiwxaa/image/upload/v1785712976/ChatGPT_Image_Aug_3_2026_12_10_26_AM_lfbqhg.png");
+    background-size: cover;
+    background-position:top;
+    background-repeat: no-repeat;
+
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+}
+.brand-ctn{
+    display: inline-flex;
+    margin: 1rem 10rem 1rem 0rem;
+    gap: 15px;
+}
+.airplane-icon{
+    color: var(--primary);
+    font-size: 2.5rem;
+}
+.brand-icon{
+    margin-top: 1rem;
+}
+.brand-name{
+    display: grid;
+}
+.first-name{
+    color: var(--text-primary);
+    font-size: 0.8em;
+    font-family: 'Pacifico';
+}
+.last-name{
+    color: var(--text-secondary);
+    font-size: 0.5rem;
+    font-family: 'inter';
+}
+#navLinks{
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+}
+.nav-links a{
+  position: relative;
+  text-decoration: none; 
+  font-family: "inter"; 
+  color: var(--text-primary); 
+  font-weight: 600; 
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #0066ff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+/* Hamburger button — hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Turn the 3 bars into an X when open */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+
+/*  --------------------          |
+|      HERO SECTION               |
+|    -----------------------      */
+
+.hero{
+    margin-left: 2rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+.hero h2{
+font-family: "Playwrite IN";
+color: var(--primary);
+font-size: 1.5rem;
+font-weight: 700;
+margin-left: 2rem;
+margin-bottom: 1rem;
+font-weight: 600;
+
+}
+.hero h1{
+    font-family:  "Poppins";
+    font-size: 3rem;
+    color: var(--text-primary);
+}
+.blue-text{
+    color: var(--primary);
+}
+.hero p{
+    color: var(--text-secondary);
+    max-width: 500px;
+    text-wrap: wrap;
+    font-family: 'Inter';
+}
+.cta-btn{
+    padding: 0.6rem 5rem 0.6rem 5rem;
+    background-color: #0066ff;
+    color: #F8FAFC;
+    font-family: 'inter';
+    border: none;
+    border-radius: 0.4rem;
+    margin-top: 1.35rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.cta-btn:hover{
+    background-color: var(--background);
+    color: var(--primary-light);
+    border: #0066ff 2px solid;
+    transition: transform.3s ease-out;
+    transform: translateY(-10px)
+}
+.arrow-icon{
+    font-size:  1rem; 
+    margin-left: 0.5rem;
+}
+
+
+
+
+
+
+/* ---------- 1024px : small laptops / large tablets ---------- */
+@media (max-width: 1024px) {
+  .brand-ctn{
+    margin: 1rem 3rem 1rem 0rem; /* less huge right margin */
+  }
+  #navLinks{
+    gap: 2.5rem; /* was 4rem — too wide once screen shrinks */
+  }
+  .hero h1{
+    font-size: 2.4rem;
+  }
+  .cta-btn{
+    padding: 0.6rem 3rem; /* was 5rem sides */
+  }
+}
+
+/* ---------- 768px : tablets ---------- */
+@media (max-width: 768px) {
+  nav{
+    flex-direction: column; /* stack brand + links */
+    gap: 1rem;
+  }
+  .brand-ctn{
+    margin: 1rem 0; /* remove the big right margin entirely */
+  }
+ .hamburger {
+    display: flex;
+  }
+
+  #navLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;          /* hidden off-screen */
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--surface);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: -4px 0 20px var(--shadow);
+    transition: right 0.35s ease;
+    z-index: 1000;
+  }
+
+  #navLinks.open {
+    right: 0;              /* slides in */
+  }
+
+  /* dim background overlay when menu is open */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    z-index: 999;
+  }
+  .nav-overlay.active {
+    display: block;
+  }
+
+  .hero{
+    margin-left: 1rem;
+    text-align: center;
+  }
+  .hero h2, .hero h1{
+    margin-left: 0;
+  }
+  .hero h1{
+    font-size: 2rem;
+  }
+  .hero p{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .cta-btn{
+    padding: 0.6rem 2.5rem;
+  }
+}
+
+/* ---------- 428px : large phones (iPhone 14 Pro Max etc.) ---------- */
+@media (max-width: 428px) {
+  #navLinks{
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+  .hero h1{
+    font-size: 1.6rem;
+  }
+  .hero h2{
+    font-size: 1.2rem;
+  }
+  .cta-btn{
+    width: 100%;         /* full-width button on mobile */
+    padding: 0.7rem 0;
+  }
+}
+
+/* ---------- 390px : standard phones (iPhone 12/13/14) ---------- */
+@media (max-width: 390px) {
+  #navLinks{
+    gap: 0.8rem;
+    font-size: 0.85rem;
+  }
+  .brand-icon .airplane-icon{
+    font-size: 2rem;
+  }
+  .hero h1{
+    font-size: 1.4rem;
+  }
+}
+
+/* ---------- 360px : common Android width ---------- */
+@media (max-width: 360px) {
+  #navLinks{
+    gap: 0.6rem;
+    font-size: 0.8rem;
+  }
+  .hero{
+    padding: 0.5rem;
+  }
+  .hero h1{
+    font-size: 1.3rem;
+  }
+  .hero p{
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------- 320px : smallest common phones (iPhone SE) ---------- */
+@media (max-width: 320px) {
+  #navLinks{
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .hero h1{
+    font-size: 1.15rem;
+  }
+  .hero h2{
+    font-size: 1rem;
+  }
+  .cta-btn{
+    font-size: 0.9rem;
+  }
+}
