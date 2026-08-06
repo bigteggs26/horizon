@@ -712,14 +712,11 @@ animation: slideLeft 1.5s ease-in-out;
     right: 15px;
     font-size: 25px;
     cursor: pointer;
-    background-color: var(--primary);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    color: var(--text-light);
+    color: var(--primary-light);
     font-weight: 700;
    text-align: center;
-   font-size: 1.75rem;
+   font-size: 2rem;
+   font-family: inter;
 
 }
 
@@ -1218,5 +1215,583 @@ animation: slideLeft 1.5s ease-in-out;
   }
   .book-btn {
     width: 100%;
+  }
+}
+/* ====================================================
+|   WHY US SECTION                                     |
+   ==================================================== */
+ 
+.whyus-sctn{
+  padding: 5rem 3rem;
+  background-color: var(--background);
+}
+.whyus-head{
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.whyus-head h2{
+  font-family: Poppins;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+.whyus-head h1{
+  font-family: Poppins;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 0.25rem;
+}
+.whyus-head .underline{
+  margin: 0.75rem auto 0;
+}
+.whyus-head p{
+  color: var(--text-secondary);
+  font-family: 'Inter';
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+ 
+.whyus-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.whyus-card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  padding: 2rem 1.5rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.whyus-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px var(--shadow);
+  border-color: var(--primary-light);
+}
+.whyus-icon{
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+}
+.whyus-card h1{
+  font-family: Poppins;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.whyus-card p{
+  font-family: 'Inter';
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+ 
+/* ====================================================
+|   REVIEWS SECTION                                    |
+   ==================================================== */
+ 
+.reviews-sctn{
+  padding: 5rem 0;
+  background-color: #60a5fa1f;
+  overflow: hidden;
+}
+.reviews-head{
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.reviews-head h2{
+  font-family: Poppins;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+.reviews-head h1{
+  font-family: Poppins;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 0.25rem;
+}
+.reviews-head .underline{
+  margin: 0.75rem auto 0;
+}
+ 
+.reviews-ctn{
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding: 0.5rem 3rem 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.reviews-ctn::-webkit-scrollbar{
+  display: none;
+}
+.review-card{
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 320px;
+  background: var(--surface);
+  border-radius: 0.6rem;
+  padding: 1.75rem;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+.review-stars{
+  display: flex;
+  gap: 3px;
+  margin-bottom: 1rem;
+}
+.review-stars .star-icon{
+  margin-bottom: 0;
+}
+.review-card p{
+  font-family: 'Inter';
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.review-person{
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+.review-avatar{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+.review-name h1{
+  font-family: Poppins;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.review-name h2{
+  font-family: 'Inter';
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+}
+ 
+.reviews-nav{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.review-arrow{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--primary);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+.review-arrow:hover{
+  background: var(--primary);
+  color: var(--text-light);
+}
+ 
+/* ====================================================
+|   CONTACT SECTION                                    |
+   ==================================================== */
+ 
+.contact-sctn{
+  padding: 5rem 3rem;
+  background: var(--background);
+}
+.contact-head{
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-head h2{
+  font-family: Poppins;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+.contact-head h1{
+  font-family: Poppins;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 0.25rem;
+}
+.contact-head .underline{
+  margin: 0.75rem auto 0;
+}
+ 
+.contact-wrap{
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 3rem auto 0;
+  background: var(--surface);
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 20px var(--shadow);
+  overflow: hidden;
+}
+.contact-info{
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact-info h1{
+  font-family: Poppins;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.contact-info > p{
+  font-family: 'Inter';
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+.contact-detail-list{
+  list-style: none;
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.25rem;
+}
+.contact-detail-list li{
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Inter';
+  font-size: 0.9rem;
+}
+.contact-icon{
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.95rem;
+}
+.contact-socials{
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+.contact-socials a{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.18);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.25s ease;
+}
+.contact-socials a:hover{
+  background: rgba(255,255,255,0.35);
+}
+ 
+.contact-form{
+  padding: 3rem 2.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+.form-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+.form-group{
+  display: grid;
+  gap: 0.4rem;
+}
+.form-group label{
+  font-family: 'Inter';
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.form-group input,
+.form-group textarea{
+  font-family: 'Inter';
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  padding: 0.7rem 0.9rem;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus{
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+.form-group textarea{
+  resize: vertical;
+  min-height: 110px;
+}
+.form-error{
+  font-family: 'Inter';
+  font-size: 0.75rem;
+  color: var(--error);
+  min-height: 1rem;
+}
+.contact-submit-btn{
+  background-color: var(--primary);
+  color: var(--background);
+  font-family: 'inter';
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+.contact-submit-btn:hover{
+  background-color: var(--background);
+  color: var(--primary);
+  border: var(--primary) 1px solid;
+  transform: translateY(-4px);
+}
+.contact-submit-btn:disabled{
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+.form-success{
+  display: none;
+  font-family: 'Inter';
+  font-size: 0.85rem;
+  color: var(--success);
+  background: color-mix(in srgb, var(--success) 12%, transparent);
+  border: 1px solid var(--success);
+  border-radius: 0.4rem;
+  padding: 0.75rem 1rem;
+}
+.form-success.show{
+  display: block;
+}
+ 
+/* ====================================================
+|   FOOTER                                              |
+   ==================================================== */
+ 
+footer{
+  background: var(--footer-bg);
+  padding: 4rem 3rem 1.5rem;
+  transition: background-color 0.3s ease;
+}
+.footer-top{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+body.dark-theme .footer-top{
+  border-bottom: 1px solid rgba(15,23,42,0.12);
+}
+.footer-brand .brand-ctn{
+  margin: 0 0 1rem 0;
+}
+.footer-brand .first-name{
+  color: var(--text-light);
+}
+.footer-brand .last-name{
+  color: var(--text-light);
+  opacity: 0.7;
+}
+.footer-brand p{
+  font-family: 'Inter';
+  font-size: 0.85rem;
+  color: var(--text-light);
+  opacity: 0.75;
+  line-height: 1.6;
+  max-width: 280px;
+}
+.footer-col h1{
+  font-family: Poppins;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 1.1rem;
+}
+.footer-col ul{
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+.footer-col ul a{
+  text-decoration: none;
+  font-family: 'Inter';
+  font-size: 0.85rem;
+  color: var(--text-light);
+  opacity: 0.75;
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+.footer-col ul a:hover{
+  opacity: 1;
+  color: var(--primary-light);
+}
+.footer-newsletter p{
+  font-family: 'Inter';
+  font-size: 0.85rem;
+  color: var(--text-light);
+  opacity: 0.75;
+  margin-bottom: 1rem;
+}
+.newsletter-form{
+  display: flex;
+  gap: 0.5rem;
+}
+.newsletter-form input{
+  flex: 1;
+  min-width: 0;
+  font-family: 'Inter';
+  font-size: 0.85rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: var(--text-light);
+  outline: none;
+}
+.newsletter-form input::placeholder{
+  color: var(--text-light);
+  opacity: 0.6;
+}
+.newsletter-form button{
+  background: var(--primary);
+  color: var(--text-light);
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.25s ease;
+}
+.newsletter-form button:hover{
+  background: var(--primary-light);
+}
+ 
+.footer-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-bottom p{
+  font-family: 'Inter';
+  font-size: 0.8rem;
+  color: var(--text-light);
+  opacity: 0.65;
+}
+.footer-legal{
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.footer-legal a{
+  font-family: 'Inter';
+  font-size: 0.8rem;
+  color: var(--text-light);
+  opacity: 0.65;
+  text-decoration: none;
+}
+.footer-legal a:hover{
+  opacity: 1;
+}
+ 
+/* ---------- Responsive: new sections ---------- */
+@media (max-width: 1024px){
+  .whyus-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-wrap{
+    grid-template-columns: 1fr;
+  }
+  .footer-top{
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.5rem;
+  }
+}
+ 
+@media (max-width: 768px){
+  .whyus-sctn, .contact-sctn{
+    padding: 4rem 1.25rem;
+  }
+  .whyus-grid{
+    grid-template-columns: 1fr;
+  }
+  .reviews-ctn{
+    padding: 0.5rem 1.25rem 1rem;
+  }
+  .review-card{
+    width: 260px;
+  }
+  .form-row{
+    grid-template-columns: 1fr;
+  }
+  footer{
+    padding: 3rem 1.25rem 1.25rem;
+  }
+  .footer-top{
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+ 
+@media (max-width: 428px){
+  .contact-info, .contact-form{
+    padding: 2rem 1.5rem;
+  }
+  .newsletter-form{
+    flex-direction: column;
+  }
+  .newsletter-form button{
+    padding: 0.65rem;
   }
 }
