@@ -44,6 +44,12 @@
              <li><a href="#">Contact</a></li>
         </ul>
         </div>
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+   <span class="toggle-thumb">
+    <span class="icon sun">☀️</span>
+    <span class="icon moon">🌙</span>
+  </span>
+  </button>
         </nav>
 
      <!-- ----------------
@@ -80,8 +86,11 @@
                 <h1>Popular Destinations</h1>
                 <div class="underline"></div>
                 <p>From Tropical Beaches to majestic mountains, explore the world's most amazing places. </p>
-                <button class="cta-btn2"><i class="fa-solid fa-list"></i> View all Destinations </button>
+                <button class="cta-btn2" id="openBtn"><i class="fa-solid fa-list"></i> View all Destinations </button>
             </div>
+
+           
+
             <div class="card-ctn">
                 <div class="card-content1 card">
                     <div class="card-details">
@@ -158,9 +167,242 @@
                     </div>
                 </div>
             </div>
+             
         </div>
     </section>
 
+
+        <!-- ----------------
+                |     MODAL-POP-UP   |   
+                --------------------->
+                
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span id="closeBtn">&times;</span>
+                        <h1>Explore Our Destinations</h1>
+                        <p>
+                            Discover breathtaking places around the world.  
+                        </p>
+                        <div class="place-cards">
+                            <div class="place">
+                                <div class="place-img place1"></div>
+                                <div class="place-content">
+                                <div class="place-head">
+                                    <img src="https://flagcdn.com/w40/fr.png" alt="">
+                                    <h1>Paris</h1>
+                                </div>
+                                    <div class="rate">
+                                        <div class="icons">
+                                            <i class="fa-solid fa-star star-icon"></i>
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                        </div>
+                                        <div class="rate-no">
+                                            <p>4.9</p>
+                                        </div>
+                                    </div>
+                                    <div class="book">
+                                        <button class="visit-btn">Visit Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="place">
+                                <div class="place-img place2"></div>
+                                <div class="place-content">
+                                <div class="place-head">
+                                    <img src="https://flagcdn.com/w40/jp.png" alt="">
+                                    <h1>Kyoto</h1>
+                                </div>
+                                    <div class="rate">
+                                        <div class="icons">
+                                            <i class="fa-solid fa-star star-icon"></i>
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                        </div>
+                                        <div class="rate-no">
+                                            <p>4.8</p>
+                                        </div>
+                                    </div>
+                                    <div class="book">
+                                        <button class="visit-btn">Visit Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="place">
+                                <div class="place-img place3"></div>
+                                <div class="place-content">
+                                <div class="place-head">
+                                    <img src="https://flagcdn.com/w40/it.png" alt="">
+                                    <h1>Rome</h1>
+                                </div>
+                                    <div class="rate">
+                                        <div class="icons">
+                                            <i class="fa-solid fa-star star-icon"></i>
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                        </div>
+                                        <div class="rate-no">
+                                            <p>4.8</p>
+                                        </div>
+                                    </div>
+                                    <div class="book">
+                                        <button class="visit-btn">Visit Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="place">
+                                <div class="place-img place4"></div>
+                                <div class="place-content">
+                                <div class="place-head">
+                                    <img src="https://flagcdn.com/w40/ae.png" alt="">
+                                    <h1>Dubai</h1>
+                                </div>
+                                    <div class="rate">
+                                        <div class="icons">
+                                            <i class="fa-solid fa-star star-icon"></i>
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                        </div>
+                                        <div class="rate-no">
+                                            <p>4.9</p>
+                                        </div>
+                                    </div>
+                                    <div class="book">
+                                        <button class="visit-btn">Visit Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="place">
+                                <div class="place-img place5"></div>
+                                <div class="place-content">
+                                <div class="place-head">
+                                    <img src="https://flagcdn.com/w40/es.png" alt="">
+                                    <h1>Barcelona</h1>
+                                </div>
+                                    <div class="rate">
+                                        <div class="icons">
+                                            <i class="fa-solid fa-star star-icon"></i>
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                        </div>
+                                        <div class="rate-no">
+                                            <p>4.9</p>
+                                        </div>
+                                    </div>
+                                    <div class="book">
+                                        <button class="visit-btn">Visit Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="place">
+                                <div class="place-img place6"></div>
+                                <div class="place-content">
+                                <div class="place-head">
+                                    <img src="https://flagcdn.com/w40/za.png" alt="">
+                                    <h1>Cape Town</h1>
+                                </div>
+                                    <div class="rate">
+                                        <div class="icons">
+                                            <i class="fa-solid fa-star star-icon"></i>
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                        </div>
+                                        <div class="rate-no">
+                                            <p>4.9</p>
+                                        </div>
+                                    </div>
+                                    <div class="book">
+                                        <button class="visit-btn">Visit Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="place">
+                                <div class="place-img place7"></div>
+                                <div class="place-content">
+                                <div class="place-head">
+                                    <img src="https://flagcdn.com/w40/eg.png" alt="">
+                                    <h1>Cairo</h1>
+                                </div>
+                                    <div class="rate">
+                                        <div class="icons">
+                                            <i class="fa-solid fa-star star-icon"></i>
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                        </div>
+                                        <div class="rate-no">
+                                            <p>4.9</p>
+                                        </div>
+                                    </div>
+                                    <div class="book">
+                                        <button class="visit-btn">Visit Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="place">
+                                <div class="place-img place8"></div>
+                                <div class="place-content">
+                                <div class="place-head">
+                                    <img src="https://flagcdn.com/w40/gr.png" alt="">
+                                    <h1>Santaroni</h1>
+                                </div>
+                                    <div class="rate">
+                                        <div class="icons">
+                                            <i class="fa-solid fa-star star-icon"></i>
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                        </div>
+                                        <div class="rate-no">
+                                            <p>4.8</p>
+                                        </div>
+                                    </div>
+                                    <div class="book">
+                                        <button class="visit-btn">Visit Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="place">
+                                <div class="place-img place9"></div>
+                                <div class="place-content">
+                                <div class="place-head">
+                                    <img src="https://flagcdn.com/w40/mv.png" alt="">
+                                    <h1>Maldives</h1>
+                                </div>
+                                    <div class="rate">
+                                        <div class="icons">
+                                            <i class="fa-solid fa-star star-icon"></i>
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                            <i class="fa-solid fa-star star-icon"></i> 
+                                        </div>
+                                        <div class="rate-no">
+                                            <p>4.8</p>
+                                        </div>
+                                    </div>
+                                    <div class="book">
+                                        <button class="visit-btn">Visit Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
     <!-- ----------------
     |     PACKAGES       |   
@@ -179,7 +421,7 @@
                         <h1>Tropical Escape</h1>
                         <div class="package-info">
                             <div class="info1">
-                                 <div class="icon">
+                                 <div class="icon2">
                                      <i class="fa-regular fa-calendar-days"></i>
                                 </div>
                                <div class="name">
@@ -188,8 +430,8 @@
                                 </i>
                             </div>
                             <div class="info2">
-                                <div class="icon">
-                                     <i class="fa-solid fa-user"></i>
+                                <div class="icon2">
+                                     <i class="fa-regular fa-user"></i>
                                 </div>
                                <div class="name">
                                 <h3>2 Users</h3>
@@ -216,7 +458,7 @@
                         <h1>Mountain Adventure</h1>
                         <div class="package-info">
                             <div class="info1">
-                                 <div class="icon">
+                                 <div class="icon2">
                                      <i class="fa-regular fa-calendar-days"></i>
                                 </div>
                                <div class="name">
@@ -225,8 +467,8 @@
                                 </i>
                             </div>
                             <div class="info2">
-                                <div class="icon">
-                                     <i class="fa-solid fa-user"></i>
+                                <div class="icon2">
+                                     <i class="fa-regular fa-user"></i>
                                 </div>
                                <div class="name">
                                 <h3>2 Users</h3>
@@ -246,14 +488,14 @@
                         </div>
                     </div>
                 </div>
-                 <div class="package">
+                <div class="package">
                     <div class="package-img img3" >
                     </div>
                     <div class="package-content">
                         <h1>European Gateway</h1>
                         <div class="package-info">
                             <div class="info1">
-                                 <div class="icon">
+                                 <div class="icon2">
                                      <i class="fa-regular fa-calendar-days"></i>
                                 </div>
                                <div class="name">
@@ -262,7 +504,7 @@
                                 </i>
                             </div>
                             <div class="info2">
-                                <div class="icon">
+                                <div class="icon2">
                                      <i class="fa-regular fa-user"></i>
                                 </div>
                                <div class="name">

@@ -28,3 +28,54 @@ window.addEventListener('resize', () => {
     toggleMenu();
   }
 });
+
+
+// Select the toggle button
+const toggleBtn = document.querySelector('#dark-mode-toggle');
+
+// Check for saved dark mode preference
+const currentTheme = localStorage.getItem('theme');
+
+// Apply the saved theme on page load
+if (currentTheme === 'dark') {
+  document.body.classList.add('dark-theme');
+}
+
+// Listen for a click on the button
+toggleBtn.addEventListener('click', () => {
+  // Toggle the dark theme class
+  document.body.classList.toggle('dark-theme');
+  
+  // Save preference to localStorage
+  let theme = 'light';
+  if (document.body.classList.contains('dark-theme')) {
+    theme = 'dark';
+  }
+  localStorage.setItem('theme', theme);
+});
+
+
+// Get elements
+const modal = document.getElementById("modal");
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
+
+
+// Open modal
+openBtn.addEventListener("click", () => {
+    modal.style.display = "block";
+});
+
+
+// Close modal
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+
+// Close when clicking outside the box
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
